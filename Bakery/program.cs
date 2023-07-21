@@ -21,6 +21,17 @@ namespace Bakery
             Console.WriteLine($"Free Bread Count: {breadCountFree}");
             Console.WriteLine($"Total Loaves: {totalLoaves}");
             Console.WriteLine($"Customer Cost: ${breadCountCost}");
+
+             int pastryCount = 10;
+            Pastry bakeryPastry = new Pastry(pastryCount);
+            int pastryCountFree = bakeryPastry.FreePastries(pastryCount);
+            int totalPastries = bakeryPastry.TotalPastryCount(pastryCount, pastryCountFree);
+            int pastryCountCost = bakeryPastry.CustomerCost(pastryCount);
+
+            Console.WriteLine($"Pastry Count: {pastryCount}");
+            Console.WriteLine($"Free Pastries: {pastryCountFree}");
+            Console.WriteLine($"Total Pastries: {totalPastries}");
+            Console.WriteLine($"Customer Cost: ${pastryCountCost}");
         }
     }
 }

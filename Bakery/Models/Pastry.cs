@@ -11,7 +11,7 @@ namespace Bakery.Models
 
     public Pastry(int pastryCount)
     {
-        pastryCount = pastryCount;
+        PastryCount = pastryCount;
     }
      public int FreePastries(int pastryCount)
         {
