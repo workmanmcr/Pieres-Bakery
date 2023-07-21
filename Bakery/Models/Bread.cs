@@ -23,5 +23,11 @@ namespace Bakery.Models
       int totalLoaves = breadCount + breadCountFree;
       return totalLoaves;
     }
+    public int CustomerCost(int breadCount)
+    {
+      int breadPrice = 5;
+      int breadCountCost = breadCount * breadPrice;
+      return breadCountCost;
+    }
   }
 }
