@@ -7,38 +7,20 @@ using System.Linq;
 
 namespace Bakery
 {
-  public class Bakery
-  {
-    static void Main()
+   public class Program
     {
-      // Welcome.welcomePrintout(); 
+        public static void Main()
+        {
+            int breadCount = 10;
+            Bread bakeryBread = new Bread(breadCount);
+            int breadCountFree = bakeryBread.FreeBread(breadCount);
+            int totalLoaves = bakeryBread.TotalBreadCount(breadCount, breadCountFree);
+            int breadCountCost = bakeryBread.CustomerCost(breadCount);
 
-      Console.WriteLine("Would you like to place an order? Y/N"); 
-      string orderResponse =  Console.ReadLine(); 
-
-      if (orderResponse == "yes" || orderResponse == "Y" || orderResponse == "y") 
-      {
-        Console.WriteLine(">>>>> How many loaves of bread would you like to purchase?"); 
-        string breadResponse = Console.ReadLine(); 
-        int breadCount = Int32.Parse(breadResponse); 
-        Bread newBreadItem = new Bread(breadCount);
-        Console.WriteLine(">>>>> Bread Loaves: " + breadResponse); 
-
-      //   Console.WriteLine(">>>>> How many pastries would you like to purchase?"); 
-      //   string pastryResponse = Console.ReadLine(); 
-      //   int pastryCount = Int32.Parse(pastryResponse); 
-      //   Pastry newPastryItem = new Pastry(pastryCount); 
-      //   Console.WriteLine(">>>>> Pastries: " + pastryResponse);
-      
-      //   newBreadItem.ReceiptPrintoutBread(breadCount);
-      //   newPastryItem.ReceiptPrintoutPastry(pastryCount);
-      //   Salutation.salutationPrintout();
-      }
-      else
-      {
-        Console.WriteLine("Please Come Again!");
-      }
-
+            Console.WriteLine($"Bread Count: {breadCount}");
+            Console.WriteLine($"Free Bread Count: {breadCountFree}");
+            Console.WriteLine($"Total Loaves: {totalLoaves}");
+            Console.WriteLine($"Customer Cost: ${breadCountCost}");
+        }
     }
-  }
 }

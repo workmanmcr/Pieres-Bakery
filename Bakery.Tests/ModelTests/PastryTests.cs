@@ -11,11 +11,12 @@ namespace Bakery.Tests
   {
 
     [TestMethod]
-    public void PastryPromo_CalculateNumberOfFreePastries_FreePastry()
-    {
-    Pastry newPastryItem = new Pastry(11);
+  public void FreePastries_CalculateFreePastries_FreePastry()
+        {
+            Pastry newPastry = new Pastry(14);
 
-    Assert.AreEqual(3, newPastryItem.FreePastry(11));
+            Assert.AreEqual(3, newPastry.FreePastries(14));
+
     }
   }
 }
