@@ -18,5 +18,10 @@ namespace Bakery.Models
       int breadCountFree = breadCount / breadPromoRate;
       return breadCountFree;
     }
+    public int TotalBreadCount(int breadCount, int breadCountFree)
+    {
+      int totalLoaves = breadCount + breadCountFree;
+      return totalLoaves;
+    }
   }
 }

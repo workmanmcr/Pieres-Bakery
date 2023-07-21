@@ -16,5 +16,12 @@ namespace Bakery.Tests
 
       Assert.AreEqual(7, newBread.FreeBread(14));
     }
+     [TestMethod]
+    public void BreadTotal_CalculateTotalBreadOwed_TotalBreadCount()
+    {
+    Bread newBreadItem = new Bread(14);
+
+    Assert.AreEqual(21, newBreadItem.TotalBreadCount(14,7));
+    }
   }
 }
