@@ -1,10 +1,14 @@
 using System;
+using Bakery.Models;
 
-class Program
+namespace Bakery
 {
-  static void Main()
+  class Program
   {
-    Bread testBread = new Bread();
-    Console.WriteLine(testBread.GetType());
+    static void Main()
+    {
+      Bakery.Models.Bread testBread = new Bakery.Models.Bread();
+      Console.WriteLine(testBread.GetType());
+    }
   }
 }
