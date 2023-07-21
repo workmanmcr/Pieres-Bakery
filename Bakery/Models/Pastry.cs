@@ -24,5 +24,11 @@ namespace Bakery.Models
             int totalPastries = pastryCount + pastryCountFree;
             return totalPastries;
         }
+          public int CustomerCost(int pastryCount)
+        {
+            int pastryPrice = 2;
+            int pastryCountCost = pastryCount * pastryPrice;
+            return pastryCountCost;
+        }
   }
 }
